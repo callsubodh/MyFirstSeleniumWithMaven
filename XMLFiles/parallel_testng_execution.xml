@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<!-- parallel will execute the tests parallel, Other values are methods, tests, classes, etc 
+Verbose can be between -1 and 10 where 10 lets testng prints logs in more detail to console and 0 is less. -1 is debug mode -->
+
+<suite name="MyFirstSuite" parallel="classes" thread-count="2" verbose="5">
+	<test name="Testone">
+
+		<parameter name="browserType" value="Chrome"></parameter>
+		<parameter name="pwdpm" value="subodhpasswords1"></parameter>
+
+		<groups>
+			<run>
+				<include name="Regression" />
+				<exclude name="Sanity"></exclude>
+			</run>
+		</groups>
+		<classes>
+
+			<class name="com.web.test.testcases.GetBrowserValFromSysEnv" />
+			<class name="com.web.test.testcases.GetBrowserValFromSysEnv2" />
+
+			<parameter name="emailpm" value="subodhclassxml1@email.com"></parameter>
+			<parameter name="urlUsed" value="http://google.com"></parameter>
+
+		</classes>
+
+
+	</test> 
+	
+	<test name="Testtwo">
+
+		<parameter name="browserType" value="Chrome"></parameter>
+		<parameter name="pwdpm" value="subodhpasswords2"></parameter>
+
+		<groups>
+			<run>
+				<include name="Sanity" />
+				<exclude name=""></exclude>
+			</run>
+		</groups>
+		<classes>
+
+			<class name="com.web.test.testcases.GetBrowserValFromSysEnv" />
+			<class name="com.web.test.testcases.GetBrowserValFromSysEnv2" />
+
+			<parameter name="emailpm" value="subodhclassxml2@email.com"></parameter>
+			<parameter name="urlUsed" value="http://google.com"></parameter>
+
+		</classes>
+
+	</test> 
+</suite>

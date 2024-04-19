@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="ContainsIncludeExcludeEmpty_PriorityExecutionOrder">
+	<test thread-count="5"
+		name="ContainsIncludeExcludeEmpty_PriorityExecutionOrder">
+
+		<groups>
+			<run>
+				<exclude name="" />
+				<include name="UAT"></include>
+				<include name="Smoke" />
+
+			</run>
+		</groups>
+
+		<classes>
+			<class name="com.web.test.testcases.PriorityExecutionOrder" />
+			<parameter name="varone" value="Subodhone"></parameter>
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->

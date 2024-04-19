@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="1" parallel="tests" name="Failed suite [MyFirstSuite (0)]" guice-stage="DEVELOPMENT" verbose="0">
+  <test thread-count="1" parallel="tests" name="Testone(failed)" verbose="0">
+    <parameter name="emailpm" value="subodhclassxml1@email.com"/>
+    <parameter name="urlUsed" value="http://google.com"/>
+    <parameter name="pwdpm" value="subodhpasswords1"/>
+    <parameter name="browserType" value="Chrome"/>
+    <groups>
+      <run>
+        <include name="Regression"/>
+        <exclude name="Sanity"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="com.web.test.testcases.GetBrowserValFromSysEnv2">
+        <methods>
+          <include name="firstTest"/>
+          <include name="captureScreenshot"/>
+          <include name="setupSuite"/>
+          <include name="quitBrowser"/>
+          <include name="startApp"/>
+        </methods>
+      </class> <!-- com.web.test.testcases.GetBrowserValFromSysEnv2 -->
+    </classes>
+  </test> <!-- Testone(failed) -->
+</suite> <!-- Failed suite [MyFirstSuite (0)] -->

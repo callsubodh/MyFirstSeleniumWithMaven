@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite thread-count="10" name="Suite">
+  
+  <test thread-count="5" name="Test1">   
+  	<classes>  		
+  		<class name="MyFirstTestNGPackage.MyFirstTestNGScript"></class>   		
+  	</classes>  
+  </test>
+  
+  <test thread-count="5" name="Test2">   
+  	<classes>  		
+  		<class name="BrowserSetup.TestNG_Browsers"></class>
+  		<class name="MyFirstTestNGPackage.MyFirstTestNGScript"></class>
+  		<parameter name="browsertype" value="chrome"></parameter>
+  		<!-- <parameter name="firstURL" value=${appURL}></parameter>-->
+  		<parameter name="secondURL" value="http://amazon.com"></parameter>     	
+  	</classes>  
+  </test>
+  
+</suite> <!-- Suite -->

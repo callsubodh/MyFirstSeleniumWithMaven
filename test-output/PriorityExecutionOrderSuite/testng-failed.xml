@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [PriorityExecutionOrderSuite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="PriorityExecutionOrderTest(failed)">
+    <parameter name="varones" value="Subodhone"/>
+    <groups>
+      <run>
+        <include name="Smoke"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="com.web.test.testcases.PriorityExecutionOrder">
+        <methods>
+          <include name="test1"/>
+        </methods>
+      </class> <!-- com.web.test.testcases.PriorityExecutionOrder -->
+    </classes>
+  </test> <!-- PriorityExecutionOrderTest(failed) -->
+</suite> <!-- Failed suite [PriorityExecutionOrderSuite] -->
