@@ -7,7 +7,7 @@ public class TestGitOne {
 	@Test
 	public void display() {
 		
-		System.out.println("This is display mtd.");
+		System.out.println("This is display mtd for the Git method.");
 	}
 
 }
